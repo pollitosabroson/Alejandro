@@ -164,6 +164,14 @@ html, body {
     background-image: url(back/azul.jpg);
     padding: 30% 0 0 0;
 }
+#section1{
+  background-image: url(back/home.jpg);
+  padding: 6% 0 0 0;
+}
+#section2{
+  background-image: url(back/contact.jpg);
+  padding: 6% 0 0 0;
+}
 #section0,
 #section1,
 #section2,
