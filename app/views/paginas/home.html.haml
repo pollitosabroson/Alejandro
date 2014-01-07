@@ -1,0 +1,31 @@
+%select#demosMenu
+  %option#background{:selected => ""} Choose Demo
+  %option#background Background Images
+  %option#looping Looping
+  %option#noAnchor No anchor links
+  %option#scrollingSpeed Scrolling speed
+  %option#easing Easing
+  %option#callbacks Callbacks
+%ul#menu
+  %li{"data-menuanchor" => "firstPage"}
+    %a{:href => "#firstPage"} First slide
+  %li{"data-menuanchor" => "secondPage"}
+    %a{:href => "#secondPage"} Second slide
+  %li{"data-menuanchor" => "3rdPage"}
+    %a{:href => "#3rdPage"} Third slide
+#section0.section
+  %h1 fullPage.js
+  %p Configure the easing jQuery UI effect!
+  %img{:alt => "fullPage", :src => "imgs/fullPage.png"}/
+#section1.section
+  .intro
+    %img{:alt => "Cool", :src => "imgs/1.png"}/
+    %h1 easeOutExpo
+    %p This example is working with `easeOutExpo` effect instead of the default `easeOutExpo`
+    %p
+      You can see more about them
+      %a{:href => "http://jqueryui.com/resources/demos/effect/easing.html", :target => "_blank"} here
+#section2.section
+  .intro
+    %h1 Cool uh?
+    %p Choose the best easing effect for your site!

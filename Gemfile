@@ -12,6 +12,7 @@ gem 'paperclip'
 gem 'redactor-rails-paperclip'
 gem 'newrelic_rpm'
 gem 'html2haml'
+gem 'turbolinks'
 
 gem 'jquery-rails'
 
