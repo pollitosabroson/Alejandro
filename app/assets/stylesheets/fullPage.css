@@ -160,3 +160,13 @@ html, body {
 .fullPage-tooltip.left {
     left: 20px;
 }
+#section0{
+    background-image: url(back/azul.jpg);
+    padding: 30% 0 0 0;
+}
+#section0,
+#section1,
+#section2,
+#section3{
+  background-size: cover;
+}
