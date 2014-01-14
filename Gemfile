@@ -15,6 +15,8 @@ gem 'redactor-rails-paperclip'
 gem 'newrelic_rpm'
 gem 'html2haml'
 gem 'turbolinks'
+gem 'protected_attributes'
+gem 'kaminari'
 
 gem 'jquery-rails'
 
