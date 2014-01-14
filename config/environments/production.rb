@@ -27,7 +27,7 @@ Alejandro::Application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
 
   # Generate digests for assets URLs.
   config.assets.digest = true
@@ -35,6 +35,8 @@ Alejandro::Application.configure do
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
 
+  # Add the fonts path
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
@@ -59,7 +61,7 @@ Alejandro::Application.configure do
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
-  # config.assets.precompile += %w( search.js )
+  config.assets.precompile += %w( application.css application.js blog.css blog.js paginas.css paginas.js )
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -74,6 +76,12 @@ Alejandro::Application.configure do
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
+   PAPERCLIP_STORAGE_OPTIONS = {
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :bucket => "Alejandro",
+    :path => "/blog/:id/:style_:filename"
+  }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
