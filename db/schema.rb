@@ -54,4 +54,7 @@ ActiveRecord::Schema.define(version: 20140114050643) do
   add_index "redactor_assets", ["assetable_type", "assetable_id"], name: "idx_redactor_assetable", using: :btree
   add_index "redactor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_redactor_assetable_type", using: :btree
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
 end
