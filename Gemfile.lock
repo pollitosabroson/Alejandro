@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/huoxito/awesome_nested_set.git
+  revision: deb035861eee4620c7e1adc500be8d5ae7e260c2
+  specs:
+    awesome_nested_set (2.1.6)
+      activerecord (>= 3.0.0)
+
+GIT
   remote: git://github.com/thomas-mcdonald/bootstrap-sass.git
   revision: 4b61cdd0b43b7743f84c748dbad782db950bc489
   specs:
@@ -36,8 +43,6 @@ GEM
       rails (>= 3, < 5)
     arel (4.0.1)
     atomic (1.1.14)
-    awesome_nested_set (2.1.6)
-      activerecord (>= 3.0.0)
     aws-sdk (1.22.1)
       json (~> 1.4)
       nokogiri (>= 1.4.4, < 1.6.0)
@@ -211,7 +216,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
-  awesome_nested_set
+  awesome_nested_set!
   aws-sdk
   bootstrap-sass!
   coffee-rails (~> 4.0.0)
