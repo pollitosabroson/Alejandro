@@ -1,7 +1,7 @@
 class Blog < ActiveRecord::Base
-  #paginates_per 5
+  paginates_per 5
   attr_accessible :content, :title, :extracto, :categoria_id, :tag_list, :imagen, :publicado
-  #acts_as_taggable
+  acts_as_taggable
   has_one :categoria
 
   has_attached_file :imagen, {

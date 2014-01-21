@@ -25,11 +25,11 @@ Alejandro::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
-   PAPERCLIP_STORAGE_OPTIONS = {
+  PAPERCLIP_STORAGE_OPTIONS = {
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :bucket => "Alejandro",
-    :path => "/Blog/:id/:style_:filename"
+    :bucket => "Mrpink",
+    :path => "/productos/:id/:style_:filename"
   }
   config.assets.debug = true
 end

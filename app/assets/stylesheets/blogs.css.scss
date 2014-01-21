@@ -1,3 +1,75 @@
-// Place all the styles related to the blogs controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//= require bootstrap
+//= require redactor-rails
+body{
+  margin: 0 !important;
+}
+.contenedor{
+  .aside{
+    display: inline-block;
+    width: 25%;
+    .selected {
+      color: #121212;
+    }
+    ul{
+      li{
+        list-style: none;
+        a{
+          color: #707070;
+          text-decoration: none;
+          font-size: 14pt;
+          &:hover{
+            color: #333;
+          }
+        }
+      }
+    }
+  }
+  .cuerpo{
+    border-left: 1px solid gray;
+    display: inline-block;
+    vertical-align: top;
+    width: 74%;
+    overflow: scroll;
+    ul{
+      padding: 0px;
+      li{
+        display: inline-block;
+        margin-top: 15px;
+        vertical-align: top;
+        a{
+          color:#333;
+          text-decoration: none;
+        }
+        p{
+          font-family: Verdana, Arial, sans-serif;
+          line-height: 1.6em;
+          color: #848484;
+          font-size: 8pt;
+        }
+        img{
+          width: 250px;
+          height: 200px;
+        }
+      }
+    }
+    .imagen{
+      width: 35%;
+    }
+    .contenido{
+      width: 64%;
+    }
+  }
+}
+.content{
+  .createcate{
+    position: absolute;
+    left: 760px;
+    top: 100px;
+  }
+}
+.footer{
+  height: 150px;
+  width: 100%;
+  background-color: #161415;
+  text-align: right;
+}

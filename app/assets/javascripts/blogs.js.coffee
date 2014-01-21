@@ -1,3 +1,11 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+#= require jquery
+#= require redactor-rails
+
+$(document).ready ->
+  $("#blog_content, #blog_extracto, #product_descripcion").redactor()
+    imageUpload: "/redactor_rails/pictures?" + params
+    imageGetJson: "/redactor_rails/pictures"
+    fileUpload: "/redactor_rails/documents?" + params
+    fileGetJson: "/redactor_rails/documents"
+    path: "/assets/redactor-rails"
+    css: "style.css"

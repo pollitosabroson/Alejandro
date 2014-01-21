@@ -19,9 +19,10 @@
   %meta{:content => yield(:url), :property => "og:url"}
   %meta{:content => "Alejandro Rosales Web Developer", :property => "og:site_name"}
   %meta{:content => yield(:imagen), :property => "og:image"}
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag    "blogs", :media => "all"
     = csrf_meta_tags
   %body
     .content
       = yield
-    = javascript_include_tag "application"
+    .footer
+    = javascript_include_tag "blogs"

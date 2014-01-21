@@ -1,2 +1,32 @@
-%h1 Blogs#index
-%p Find me in app/views/blogs/index.html.haml
+.contenedor
+  .aside
+    %ul
+      %li 
+        %h1
+          %a{:href => "/"} Home
+      %li
+        %h1
+          %a{:href => "/"} about
+      %li
+        %h1
+          %a{:href => "/"} Contacto
+      %li
+        %h1
+          %a{:href => "/"} Portafolio
+      %li
+        %h1
+          %a{:href => "/", :class => 'selected' } Blog →
+  .cuerpo
+    -@posts.each do |p|
+      %ul
+        %li 
+          %ul
+            %li.imagen
+              = link_to image_tag(p.imagen), blog_path(p)
+            %li.contenido
+              %h1
+                = link_to (p.title), blog_path(p)
+              %p
+                = p.extracto.html_safe
+                = link_to "leer más →", blog_path(p), {:class => "leermas"}
+

@@ -1,0 +1,11 @@
+#main{:vista=>"blog_new"}
+  .bs-docs-section.col-12.col-md-12.col-lg-12{:role => "main"}
+    .page-header
+      %h2#btn-groups
+        %i.glyphicon.glyphicon.glyphicon-plus
+        Nuevo Post
+  .createcate.col-md-4
+    %h5 Agrega una categoria
+    =render "categorias/form"
+  = render 'form'
+  .clearfix

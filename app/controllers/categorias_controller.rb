@@ -1,7 +1,7 @@
 class CategoriasController < ApplicationController
-  def index
-    @categorias = Categoria.all.order('created_at DESC')
-  end
+  # def index
+  #   @categorias = Categoria.all.order('created_at DESC')
+  # end
   def show
     @categorias = Categoria.all.order('created_at DESC')
   end

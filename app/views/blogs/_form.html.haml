@@ -1,0 +1,25 @@
+.create
+  =form_for @posts, {:class =>"col-md-11 col-lg-11"} do |f|
+    .form-group
+      =f.label :imagen, "Foto Principal, puedes arrastrar una imagen o presionar el boton :D"
+      =f.file_field :imagen  
+    .form-group
+      =f.label :publicado, "Publicado"
+      =f.check_box :publicado
+    .form-group
+      =f.label :categoria_id, "Categoria"
+      =f.select :categoria_id, ([["Raíz", nil]] + nested_set_options(Categoria, @categoria) {|i, level| "#{'&nbsp;' * (level.to_i+1)}".html_safe + " #{i.categoria}" }),{}, {:class =>"form-control", :size=>"3"}
+    .form-group
+      =f.label :title, "Titulo"
+      =f.text_field :title, :placeholder => "No se pueden poner puntos", :required => "", :class => "form-control"
+    .form-group
+      =f.label :content, "Contenido"
+      =f.text_area :content, :class => "form-control"
+    .form-group
+      =f.label :extracto
+      =f.text_area :extracto,:required => "", :class => "form-control"
+    .form-group 
+      Tags
+      =f.text_field :tag_list, :placeholder => "Tags (separado por comas)",:required => "", :class => "form-control"
+    .form-group
+      =f.submit "Guardar", {:class => "btn btn-success pull-right"}

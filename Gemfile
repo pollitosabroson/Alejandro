@@ -17,6 +17,9 @@ gem 'html2haml'
 gem 'turbolinks'
 gem 'protected_attributes'
 gem 'kaminari'
+gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass'
+gem 'awesome_nested_set'#, github: 'huoxito/awesome_nested_set'
+gem 'acts-as-taggable-on'
 
 gem 'jquery-rails'
 

@@ -1,0 +1,6 @@
+#new_one
+  = form_for @categorias do |f|
+    .form-group
+      =f.text_field :categoria, :placeholder => 'categoria',:required => "", :class =>"form-control col-12"
+    .form-group
+      =f.submit("Guardar categoria", {:class => "btn btn-info"})

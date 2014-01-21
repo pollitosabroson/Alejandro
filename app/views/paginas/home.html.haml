@@ -1,21 +1,81 @@
-%ul#menu
-  %li{"data-menuanchor" => "section0"}
-    %a{:href => "#section0"}Home
-  %li{"data-menuanchor" => "section1"}
-    %a{:href => "#section1"} About
-  %li{"data-menuanchor" => "section2"}
-    %a{:href => "#section2"} Contacto
-  %li{"data-menuanchor" => "section3"}
-    %a{:href => "#section2"} Blog
-  
-#section0.section
-  %h1 Alejandro Rosales
-  %p Web Developer y Gamer
-#section1.section
-  %h1 ¿Qué hago y qué no hago?
-  %p This example is working with `easeOutExpo` effect instead of the default `easeOutExpo`
-  %p
-    You can see more about them
-#section2.section
-  %h1 Contacto
-  %p Choose the best easing effect for your site!
+#wrapper
+  %header#branding
+    %h1 Alejandro Rosales
+    %h1= link_to "blog",blogs_path
+  %nav#primary
+    %ul
+      %li
+        %h1 Acerca de mi 
+        %a.manned-flight{:href => "#manned-flight"} View
+      %li
+        %h1 Que hago y que no hago
+        %a.frameless-parachute{:href => "#frameless-parachute"} View
+      %li
+        %h1 Herramientas de trabajo
+        %a.english-channel{:href => "#english-channel"} View
+      %li
+        %h1 Contacto
+        %a.about{:href => "#about"} View
+      %li
+        %h1 Blog
+        .about=link_to"",blogs_path
+  #content
+    %article#manned-flight
+      %header
+        %h1 Acerca de mi 
+      %p Entusiasta programador que se dedica el desarollo de aplicaciones web principalmente en Ruby on rails y Django
+      %nav.next-prev
+        %hr/
+        %a.next.frameless-parachute{:href => "#frameless-parachute"} Next
+    %article#frameless-parachute
+      %header
+        %h1 Que hago y que no hago
+      %p  Me dedico mas a el desarrolló de aplicaciones web en la parte de  Back-end y bases de datos. Cuento con conocimientos intermedios en el desarrollo de interfaces para usuarios
+      %nav.next-prev
+        %a.prev.manned-flight{:href => "#manned-flight"} Prev
+        %hr/
+        %a.next.english-channel{:href => "#english-channel"} Next
+    %article#english-channel
+      %header
+        %h1 Herramientas de trabajo
+      %p Ruby on rails  3.2 y 4.0
+      %p ruby 1.9.3
+      %p sass
+      %p haml
+      %p coffescript
+      %p Django 1.5
+      %p linux
+      %p Mac os
+
+      %nav.next-prev
+        %a.prev.frameless-parachute{:href => "#frameless-parachute"} Prev
+        %hr/
+        %a.next.about{:href => "#about"} Next
+    %article#about
+      %header
+        %h1 About
+      %p
+        This is a jQuery parallax scrolling experiment by Jonathan Nicol.
+        %a{:href => "http://f6design.com/journal/2011/08/06/build-a-parallel-scrolling-website-interface-with-jquery-and-css/"} Read about it
+        on my blog.
+      %nav.next-prev
+        %a.prev.english-channel{:href => "#english-channel"} Prev
+        %hr/
+  / Parallax foreground
+  #parallax-bg3
+    #bg3-1= image_tag("img/balloon.png",:alt => "Montgolfier hot air balloon", :height => "757",:width => "529", )
+    #bg3-2= image_tag("img/balloon2.png",:alt => "Frameless parachute", :height => "583",:width => "446")
+    #bg3-3= image_tag("img/balloon3.png",:alt => "Blanchard's air balloon", :height => "713", :width => "446")
+    #bg3-4= image_tag("img/ground.png",:alt => "Landscape with trees and cows", :height => "684", :width => "1104")
+  / Parallax  midground clouds
+  #parallax-bg2
+    #bg2-1=image_tag("img/cloud-lg1.png")
+    #bg2-2=image_tag("img/cloud-lg1.png")
+    #bg2-3=image_tag("img/cloud-lg1.png")
+    #bg2-4=image_tag("img/cloud-lg1.png")
+    #bg2-5=image_tag("img/cloud-lg1.png")
+  #parallax-bg1
+    #bg2-1=image_tag("img/cloud-lg1.png")
+    #bg2-2=image_tag("img/cloud-lg2.png")
+    #bg2-3=image_tag("img/cloud-lg2.png")
+    #bg2-4=image_tag("img/cloud-lg2.png")

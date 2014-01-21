@@ -76,11 +76,11 @@ Alejandro::Application.configure do
 
   # Disable automatic flushing of the log to improve performance.
   # config.autoflush_log = false
-   PAPERCLIP_STORAGE_OPTIONS = {
+  PAPERCLIP_STORAGE_OPTIONS = {
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :bucket => "Alejandro",
-    :path => "/blog/:id/:style_:filename"
+    :bucket => "Mrpink",
+    :path => "/productos/:id/:style_:filename"
   }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
