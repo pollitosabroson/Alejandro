@@ -1,4 +1,5 @@
 require 'ostruct'
+include ActsAsTaggableOn::TagsHelper
 module BlogsHelper
   def stats(id)
     le_post = Blog.find id
