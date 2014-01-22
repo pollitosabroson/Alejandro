@@ -1,6 +1,6 @@
 require 'ostruct'
-include ActsAsTaggableOn::TagsHelper
 module BlogsHelper
+  include ActsAsTaggableOn::TagsHelper
   def stats(id)
     le_post = Blog.find id
     le_tags = le_post.tags;
