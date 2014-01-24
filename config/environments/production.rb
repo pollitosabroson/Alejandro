@@ -79,8 +79,8 @@ Alejandro::Application.configure do
   PAPERCLIP_STORAGE_OPTIONS = {
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :bucket => "Mrpink",
-    :path => "/productos/:id/:style_:filename"
+    :bucket => "pruebasblog",
+    :path => "/imagenes/:id/:style_:filename"
   }
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
