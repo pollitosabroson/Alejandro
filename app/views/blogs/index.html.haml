@@ -1,3 +1,4 @@
+-content_for :titulo, "Blog de programacion de Alejandro Rosales"
 .contenedor
   .aside
     %ul
@@ -15,7 +16,7 @@
           %a{:href => "/"} Portafolio
       %li
         %h1
-          %a{:href => "/", :class => 'selected' } Blog →
+          %a{:href => blogs_path, :class => 'selected' } Blog →
   .cuerpo
     -@posts.each do |p|
       %ul

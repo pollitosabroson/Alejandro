@@ -70,6 +70,16 @@ body{
     left: 760px;
     top: 100px;
   }
+  .contentblog{
+    width: 90%;
+    margin: auto;
+    h1{
+      text-transform: uppercase;
+    }
+    p{
+      text-align: justify;
+    }
+  }
 }
 .footer{
   height: 150px;
