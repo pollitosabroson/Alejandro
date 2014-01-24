@@ -79,6 +79,30 @@ body{
     p{
       text-align: justify;
     }
+    .lenguaje{
+      background: #272822;
+      color: #f8f8f2;
+      text-shadow: 0 1px rgba(0,0,0,0.3);
+      font-family: Consolas, Monaco, 'Andale Mono', monospace;
+      direction: ltr;
+      text-align: left;
+      word-spacing: normal;
+      word-break: normal;
+      -moz-tab-size: 4;
+      -o-tab-size: 4;
+      tab-size: 4;
+      -webkit-hyphens: none;
+      -moz-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+      padding: 1em;
+      margin: .5em 0;
+      overflow: auto;
+      border-radius: 0.3em;
+      p{
+        color: #1BC085;
+      }
+    }
   }
 }
 .footer{
@@ -86,4 +110,12 @@ body{
   width: 100%;
   background-color: #161415;
   text-align: right;
+  .contentfooter{
+    width: 1040px;
+    margin: auto;
+    text-align: center;
+    p{
+      color: #fff;
+    }
+  }
 }
