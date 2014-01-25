@@ -4,8 +4,6 @@ body{
   margin: 0 !important;
 }
 .contenedor{
-  width: 1040px;
-  margin: auto;
   .aside{
     display: inline-block;
     width: 25%;
@@ -64,7 +62,15 @@ body{
     }
   }
 }
+
 .content{
+  width: 1040px;
+  margin: auto;
+  margin-bottom: -142px; 
+  &:after{
+    content: "";
+    display: block;
+  }
   .createcate{
     position: absolute;
     left: 760px;
@@ -105,9 +111,12 @@ body{
     }
   }
 }
+.footer, .content:after{
+  height: 142px; 
+}
 .footer{
-  height: 150px;
   width: 100%;
+  height: 142px;
   background-color: #161415;
   text-align: right;
   .contentfooter{
