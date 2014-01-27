@@ -15,7 +15,7 @@
       #{"#{yield(:titulo)} | " if content_for?(:titulo)} Alejandro Rosales Web Developer
     %meta{:content => "#{yield(:titulo)} | Alejandro Rosales Web Developer", :property => "og:title"}
   %link{ :rel => "shortcut icon", :href => "/favicon.ico", :type => "image/x-icon"}/
-  %meta{:name => "description", :content => yield(:descripcion)}
+  %meta{:name => "description", :content => yield(:descripcion), :property => "og:description"}
   %meta{:content => yield(:url), :property => "og:url"}
   %meta{:content => "Alejandro Rosales Web Developer", :property => "og:site_name"}
   %meta{:content => yield(:imagen), :property => "og:image"}
