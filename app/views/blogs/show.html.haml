@@ -27,9 +27,9 @@
         = @posts.title
       %p
         = @posts.content.html_safe
-      .redes
-        .fb-share-button{"data-href" => "http://www.alejandrohdez.com/blogs/#{@posts.id}"+"-"+"#{@posts.title}", "data-type" => "button"}
+      .redes  
         %a.twitter-share-button{"data-via" => "pollitosabroson", :href => "https://twitter.com/share"} Tweet
+        .fb-share-button{"data-href" => "http://www.alejandrohdez.com/blogs/#{@posts.id}"+"-"+"#{@posts.title}", "data-type" => "button"}s
       .tools
         %i.glyphicon.glyphicon-tags
         - stats.tags.each do |tag|
