@@ -27,6 +27,9 @@
         = @posts.title
       %p
         = @posts.content.html_safe
+      .redes
+        .fb-share-button{"data-href" => "http://www.alejandrohdez.com/blogs/#{@posts.id}"+"-"+"#{@posts.title}", "data-type" => "button"}
+        %a.twitter-share-button{"data-via" => "pollitosabroson", :href => "https://twitter.com/share"} Tweet
       .tools
         %i.glyphicon.glyphicon-tags
         - stats.tags.each do |tag|
@@ -55,3 +58,14 @@
               s.src = '//' + disqus_shortname + '.disqus.com/count.js';
               (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
           }());
+#fb-root
+:javascript
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=183182198556809";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+:javascript
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
