@@ -36,6 +36,9 @@ body{
         display: inline-block;
         margin-top: 15px;
         vertical-align: top;
+        h1{
+          font-size: 16px;
+        }
         a{
           color:#333;
           text-decoration: none;
@@ -106,6 +109,45 @@ body{
       overflow: auto;
       border-radius: 0.3em;
       color: #1BC085;
+    }
+  }
+}
+
+.pagination{
+  margin-bottom:  15px;
+  a{
+  color: #fff;
+  text-decoration: none;
+  }
+  .page{
+    border-radius: 6px;
+    padding: 4px 4px 4px 8px;
+    border: 1px solid #ededed;
+    background-color: #000;
+    color: #fff;
+    margin-left: 5px;
+    text-align: center;
+    &:hover{
+      background-color: #707070;
+    }
+  }
+  .current{
+    border-radius: 6px;
+    padding: 4px 6px;
+    border: 1px solid #ededed;
+    background-color: #707070;
+    color: #fff;
+  }
+  .next, .last, .first, .prev{
+    border-radius: 6px;
+    padding: 4px 4px 4px 8px;
+    border: 1px solid #ededed;
+    background-color: #000;
+    color: #fff;
+    margin-left: 5px;
+    text-align: center;
+    &:hover{
+      background-color: #707070;
     }
   }
 }
