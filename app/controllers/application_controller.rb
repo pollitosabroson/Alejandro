@@ -4,6 +4,15 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_filter :authenticate, :only => [:new, :edit, :create, :update, :destroy, :admin, :admin_print, :save]
 
+  private
+
+  def redirect_main_domain
+    dominio = 'www.alejandrohdez.com'
+    if request.env['HTTP_HOST'] != dominio
+      redirect_to "http://#{dominio}#{request.fullpath}"
+    end
+  end
+
   def authenticate
     authenticate_or_request_with_http_basic do |user, password| 
         session[:admin]= (user == ENV['user'] && password == ENV['pass'])
