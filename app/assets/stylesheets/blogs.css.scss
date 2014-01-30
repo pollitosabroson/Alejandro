@@ -130,14 +130,12 @@ body{
       white-space: pre;
       word-spacing: normal;
       word-break: normal;
-      -moz-tab-size: 4;
-      -o-tab-size: 4;
-      tab-size: 4;
+      -moz-tab-size: 0;
+      -o-tab-size: 0;
+      tab-size: 0;
       -webkit-hyphens: none;
       -moz-hyphens: none;
       -ms-hyphens: none;
-      padding: 1em;
-      margin: .5em 0;
       overflow: auto;
       border-radius: 0.3em;
       background: #272822;
