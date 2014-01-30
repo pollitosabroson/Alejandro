@@ -28,7 +28,7 @@ Alejandro::Application.configure do
   PAPERCLIP_STORAGE_OPTIONS = {
     :storage => :s3,
     :s3_credentials => "#{Rails.root}/config/s3.yml",
-    :bucket => "pruebasblog",
+    :bucket => "alejandrohdezblog",
     :path => "/imagenes/:id/:style_:filename"
   }
   config.assets.debug = true

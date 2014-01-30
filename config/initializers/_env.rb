@@ -1,6 +1,0 @@
-ENV['S3_KEY'] = 'AKIAINXYHER7TJ3FDRBA'
-ENV['S3_SECRET'] = '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'
-
-ENV['user'] = '123'
-ENV['pass'] = '123'
-
