@@ -20,6 +20,11 @@
       %li
         %h1
           %a{:href => blogs_path, :class => 'selected' } Blog →
+    %script{:async => "", :src => "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}
+    / blog
+    %ins.adsbygoogle{"data-ad-client" => "ca-pub-9338982472988224", "data-ad-slot" => "8131930457", :style => "display:inline-block;width:125px;height:125px"}
+    :javascript
+      (adsbygoogle = window.adsbygoogle || []).push({});
   .cuerpo
     .contentblog
       - stats = stats(@posts.id);
