@@ -1,5 +1,6 @@
 #= require jquery
 #= require redactor-rails
+#= require prism.js
 
 $(document).ready ->
   $("#blog_content, #blog_extracto, #product_descripcion").redactor()
